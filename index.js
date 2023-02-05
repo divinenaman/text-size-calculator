@@ -6,7 +6,7 @@ const urlParams = new URLSearchParams(queryString);
 const fontFile = urlParams.get("font")
 const fontSize = urlParams.get("font_size")
 
-const font = new FontFace("Baasha Font", fontFile)
+const font = new FontFace("Custom Font", fontFile)
 document.fonts.add(font)
 
 const f = document.querySelector("#form")
@@ -30,7 +30,7 @@ function onSubmit(e) {
 
     if (width) {
         const div = document.createElement("div")
-        div.setAttribute("style", `font-family: 'Baasha Font'; width:${width}px; background-color: red; height: auto; font-size: ${fontSize}px;`)
+        div.setAttribute("style", `font-family: 'Custom Font', 'serif'; width:${width}px; background-color: red; height: auto; font-size: ${fontSize}px;`)
         div.innerHTML = text
 
         document.body.appendChild(div)
